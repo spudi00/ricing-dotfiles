@@ -22,7 +22,7 @@ binds {
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
     XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
     XF86AudioMute                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    Mod+M                               allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    Mod+Ctrl+S                          allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
     XF86AudioNext                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
     XF86AudioPrev                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
     XF86AudioPlay                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
@@ -39,11 +39,19 @@ binds {
     Mod+J                                { focus-window-down; }
     Mod+K                                { focus-window-up; }
     Mod+L                                { focus-column-right; }
+    Mod+LEFT                             { focus-column-left; }
+    Mod+DOWN                             { focus-window-down; }
+    Mod+UP                               { focus-window-up; }
+    Mod+RIGHT                            { focus-column-right; }
 
     Mod+Shift+H                          { move-column-left; }
     Mod+Shift+J                          { move-window-down; }
     Mod+Shift+K                          { move-window-up; }
     Mod+Shift+L                          { move-column-right; }
+    Mod+Shift+LEFT                       { move-column-left; }
+    Mod+Shift+DOWN                       { move-window-down; }
+    Mod+Shift+UP                         { move-window-up; }
+    Mod+Shift+RIGHT                      { move-column-right; }
 
     Mod+Home                            { focus-column-first; }
     Mod+End                             { focus-column-last; }
@@ -95,7 +103,7 @@ binds {
     Mod+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // ─── Exit / Power ───
-    CTRL+ALT+Delete                     { quit; } // Also quits Niri
+    Mod+Ctrl+Escape                     { quit; } // Also quits Niri
     Mod+Shift+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
     Mod+O                               repeat=false { toggle-overview; }
 }

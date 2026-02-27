@@ -4,6 +4,7 @@
 input {
     keyboard {
         xkb {
+            options "altwin:swap_alt_win,caps:escape" 
             layout "us" // Use the American keyboard layout
         }
         numlock // Enable numlock on startup
