@@ -1,11 +1,10 @@
     window-rule {
-        geometry-corner-radius 20 // Set every window radius
+        geometry-corner-radius 10 // Set every window radius
         clip-to-geometry true
     }
-
     layer-rule {
-        match namespace="^noctalia-wallpaper*"
-        place-within-backdrop true
+  	match namespace="^noctalia-wallpaper*"
+  	place-within-backdrop true
     }
     window-rule {
         match title="Discord"
@@ -19,7 +18,7 @@
     }
     window-rule {
         match title="Spotify"
-        open-on-workspace "3"
+        open-on-workspace "4"
         open-focused false
     }
     

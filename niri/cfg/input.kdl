@@ -14,11 +14,6 @@ input {
 	    accel-speed 0.0
         
     }
-	
-    touchpad {
-        tap // Enable tap-to-click
-        natural-scroll // Enable natural (macOS-style) scrolling
-    }
 
     focus-follows-mouse // Automatically focus windows under the mouse pointer
     // workspace-auto-back-and-forth // Enable workspace back & forth switching
