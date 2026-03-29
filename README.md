@@ -1,11 +1,9 @@
-
-<img width="1920" height="1080" alt="screenshot-2026-03-11_18-59-17" src="https://github.com/user-attachments/assets/3f0526db-93cf-4856-9357-ea1d8f5bcd6e" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3c7cd310-8b8b-432a-ba82-0155267bc924" />
 
 ## Niri
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/42e9999d-91bb-4a77-9aa9-ea257786b5e3" />
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/42e9999d-91bb-4a77-9aa9-ea257786b5e3" />
 
 ## Hyprland
 
