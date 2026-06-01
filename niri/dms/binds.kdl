@@ -27,8 +27,8 @@ binds {
         spawn "dms" "ipc" "call" "dankdash" "wallpaper";
     }
         
-    // === WebApps ===
-    Mod+Shift+A hotkey-overlay-title="AI" { spawn "zen-browser" "https://claude.ai/new"; }
+    // === Apps ===
+    Mod+Shift+A hotkey-overlay-title="AI" { spawn "kitty" "opencode"; }
     Mod+Shift+Y hotkey-overlay-title="YouTube" { spawn "zen-browser" "https://youtube.com"; }
     Mod+Shift+I hotkey-overlay-title="Instagram" { spawn "zen-browser" "https://www.instagram.com/sudqa/.com"; }
 
@@ -36,8 +36,8 @@ binds {
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
         spawn "dms" "ipc" "call" "lock" "lock";
     }
-    Mod+Ctrl+Escape { quit; }
-    Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
+    Ctrl+Alt+Delete { quit; }
+    Mod+Ctrl+Escape hotkey-overlay-title="Task Manager" {
         spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
     }
 
@@ -85,7 +85,7 @@ binds {
     }
 
     // === Window Management ===
-    Mod+W repeat=false { close-window; }
+    Mod+Q repeat=false { close-window; }
     Mod+F { maximize-column; }
     Mod+Ctrl+F { fullscreen-window; }
     Mod+T { toggle-window-floating; }
@@ -169,9 +169,9 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // === Screenshots ===
-    CTRL+Shift+1                        { screenshot; }
-    CTRL+Shift+2                        { screenshot-screen; }
-    CTRL+Shift+3                        { screenshot-window; }    
+    Mod+F1                        { screenshot; }
+    Mod+F2                        { screenshot-screen; }
+    Mod+F3                        { screenshot-window; }    
 
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }

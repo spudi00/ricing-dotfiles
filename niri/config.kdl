@@ -16,7 +16,7 @@ gestures {
 input {
     keyboard {
         xkb {
-            options "altwin:swap_alt_win,caps:escape" 
+            options "altwin:swap_alt_win,caps:" 
             layout "us" // Use the American keyboard layout
         }
         numlock // Enable numlock on startup
@@ -32,7 +32,7 @@ input {
 }
 
 layout {
-    gaps 15		
+    gaps 10
     background-color "transparent"
     always-center-single-column
     center-focused-column "never"
@@ -45,17 +45,15 @@ layout {
 
     focus-ring {
         off
-        width 2
-        active-color "#cba6f7"    // outer ring — accent color
-        inactive-color "#313244"
+        width 0
     }
     
     border {
         on
-        width 2
-        active-color   "#707070"      // Neutral gray
-        inactive-color "#d0d0d0"      // Light gray
-        urgent-color   "#cc4444"      // Softer red
+        width 1
+        active-color   "#666666" 
+        inactive-color "#303030"
+        urgent-color   "#cc4444"
     }
     shadow {
         on
@@ -67,6 +65,14 @@ layout {
     struts {
     }
 }
+
+window-rule {
+        geometry-corner-radius 0
+        clip-to-geometry true
+        tiled-state true
+        draw-border-with-background false
+}
+
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
@@ -96,38 +102,7 @@ hotkey-overlay {
 }
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-animations {
-    workspace-switch {
-        spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
-    }
-    window-open {
-        duration-ms 150
-        curve "ease-out-expo"
-    }
-    window-close {
-        duration-ms 150
-        curve "ease-out-quad"
-    }
-    horizontal-view-movement {
-        spring damping-ratio=0.85 stiffness=423 epsilon=0.0001
-    }
-    window-movement {
-        spring damping-ratio=0.75 stiffness=323 epsilon=0.0001
-    }
-    window-resize {
-        spring damping-ratio=0.85 stiffness=423 epsilon=0.0001
-    }
-    config-notification-open-close {
-        spring damping-ratio=0.65 stiffness=923 epsilon=0.001
-    }
-    screenshot-ui-open {
-        duration-ms 200
-        curve "ease-out-quad"
-    }
-    overview-open-close {
-        spring damping-ratio=0.85 stiffness=800 epsilon=0.0001
-    }
-}
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
@@ -180,13 +155,12 @@ window-rule {
 }
 // Open dms windows as floating by default
 window-rule {
-    match app-id=r#"org.quickshell$"#
+    match app-id="^com.danklinux.dms$"
     open-floating true
 }
 
 window-rule {
     match app-id="^Spotify$"
-    match app-id="^vesktop$"
     match app-id="^zen$"
     match app-id="^discord$"
     match app-id="^org.quickshell$"
@@ -194,13 +168,47 @@ window-rule {
     match app-id="^code-oss$"
     match app-id="^Tk$"
     match app-id="^faugus-launcher$"
-    match app-id="^helium$"
-    match app-id="^faugus-launcher$"
-    opacity 0.90
+    //match app-id="^helium$"
+    match app-id="^org.prismlauncher.PrismLauncher$"
+    match app-id="^com.danklinux.dms$"
+    match app-id="^equibop$"
+    opacity 0.85
     background-effect{
         blur true
     }
 }
+
+//CUSTOM RULES
+
+// @id=wr_1779806983135390096 @name=Spotify
+window-rule {
+    match app-id="^Spotify$"
+    open-on-workspace "4"
+    default-column-width { proportion 0.5; }
+}
+
+// @id=wr_1779806995597838559 @name=discord
+window-rule {
+    match app-id="^discord$"
+    open-on-workspace "3"
+    default-column-width { proportion 0.573; }
+}
+
+// @id=wr_1779807031857385627 @name=zen
+window-rule {
+    match app-id="^zen$"
+    open-focused true
+    open-on-workspace "2"
+    default-column-width { proportion 0.8; }
+}
+
+// @id=wr_1780072838521871101 @name=equibop
+window-rule {
+    match app-id="^equibop$"
+    open-on-workspace "3"
+    default-column-width { proportion 0.573; }
+}
+
 
 debug {
     honor-xdg-activation-with-invalid-serial
@@ -216,13 +224,15 @@ recent-windows {
     }
 }
 
+
 workspace "1"
 workspace "2"
 workspace "3"
 workspace "4"
+workspace "5"
 
 // Include dms files
-include "dms/colors.kdl"
+//include "dms/colors.kdl"
 include "dms/layout.kdl"
 include "dms/alttab.kdl"
 include "dms/binds.kdl"

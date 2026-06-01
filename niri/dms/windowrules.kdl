@@ -1,53 +1,36 @@
 // DMS Window Rules - Managed by DankMaterialShell
 // Do not edit manually - changes may be overwritten
 
-// @id=wr_1775391281921527585 @name=spotify
+// @id=wr_1779806907269077091 @name=org.prismlauncher.PrismLauncher
+window-rule {
+    match app-id="^org.prismlauncher.PrismLauncher$"
+}
+
+// @id=wr_1779806983135390096 @name=Spotify
 window-rule {
     match app-id="^Spotify$"
-    open-on-workspace "3"
-    default-column-width { proportion 0.3; }
+    open-on-workspace "4"
+    default-column-width { proportion 0.5; }
 }
 
-// @id=wr_1775391531302375461 @name=vesktop
-window-rule {
-    match app-id="^vesktop$"
-    open-on-workspace "3"
-    default-column-width { proportion 0.577; }
-}
-
-// @id=wr_1775830019937636601 @name=discord
+// @id=wr_1779806995597838559 @name=discord
 window-rule {
     match app-id="^discord$"
     open-on-workspace "3"
-    default-column-width { proportion 0.577; }
+    default-column-width { proportion 0.573; }
 }
 
-// @id=wr_1775395184360306738 @name=zen
+// @id=wr_1779807031857385627 @name=zen
 window-rule {
     match app-id="^zen$"
+    open-focused true
     open-on-workspace "2"
-    default-column-width { proportion 0.7; }
+    default-column-width { proportion 0.8; }
 }
 
-// @id=wr_1776436385886191984 @name=helium
+// @id=wr_1780072838521871101 @name=equibop
 window-rule {
-    match app-id="^helium$"
-    open-on-workspace "2"
-    default-column-width { proportion 0.7; }
+    match app-id="^equibop$"
+    open-on-workspace "3"
+    default-column-width { proportion 0.573; }
 }
-
-// @id=wr_1775401296787321368 @name=Tk
-window-rule {
-    match app-id="^Tk$"
-    open-floating true
-}
-
-
-// @id=wr_1776341831859127762 @name=kitty
-window-rule {
-    match app-id="^kitty$"
-    //default-column-width { fixed 840; }
-    // default-window-height { fixed 810; }
-}
-
-
